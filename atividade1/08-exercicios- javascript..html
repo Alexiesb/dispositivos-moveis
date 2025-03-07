@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Bem-vindo ao exercício</h1>
+            <p><strong>Nome:</strong> Alexandre Souza Mendonça</p>
+            <p><strong>Matrícula:</strong> 24114290185</p>
+            <p><strong>Data:</strong> 06/03/2025</p>
+        </div>
+
+        <p>objeto: nome: "Carlos", idade: 28, cidade: "São Paulo"</p>
+        
+        <div class="atividade">
+            <div id="resposta" class="resposta"></div>
+        </div>
+        <button class="btn" onclick="window.location.href='09-exercicios- javascript..html'">Ir para Atividade 9</button>
+    </div>
+    
+    <script>
+        var pessoa = { nome: "Carlos", idade: 28, cidade: "São Paulo" };
+
+            pessoa.nacionalidade = "Brasileiro";
+            delete pessoa.idade;
+
+            var propriedades = Object.keys(pessoa).join(', ');
+
+            document.getElementById("resposta").innerText = 
+                "Adicionada 'nacionalidade' com valor: " + pessoa.nacionalidade + "\n" +
+                "Removida a propriedade 'idade'.\n" +
+                "Propriedades restantes: " + propriedades;
+
+    </script>
+</body>
+</html>
