@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Bem-vindo ao exercício</h1>
+            <p><strong>Nome:</strong> Alexandre Souza Mendonça</p>
+            <p><strong>Matrícula:</strong> 24114290185</p>
+            <p><strong>Data:</strong> 06/03/2025</p>
+        </div>
+        <div class="atividade">
+            <div id="resposta" class="resposta"></div>
+        </div>
+        <button class="btn" onclick="window.location.href='08-exercicios- javascript..html'">Ir para Atividade 8</button>
+    </div>
+    
+    <script>
+        var frutas = ["Maçã", "Banana", "Abacaxi", "Laranja"];
+        var maiusculas = frutas.map(f => f.toUpperCase());
+        var comA = frutas.filter(f => f.startsWith('A'));
+        var comprimentos = frutas.map(f => f.length);
+        
+        document.getElementById("resposta").innerText = 
+            "Maiúsculas: " + maiusculas.join(', ') + "\n" +
+            "Frutas com A: " + comA.join(', ') + "\n" +
+            "Comprimentos: " + comprimentos.join(', ');
+    </script>
+</body>
+</html>

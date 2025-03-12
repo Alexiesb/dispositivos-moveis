@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Bem-vindo ao exercício</h1>
+            <p><strong>Nome:</strong> Alexandre Souza Mendonça</p>
+            <p><strong>Matrícula:</strong> 24114290185</p>
+            <p><strong>Data:</strong> 06/03/2025</p>
+        </div>
+
+        <div class="atividade">
+            <div id="resposta" class="resposta"></div>
+        </div>
+        <button class="btn" onclick="window.location.href='10-exercicios- javascript..html'">Ir para Atividade 10</button>
+    </div>
+    
+    <script>
+        var livro = { titulo: "O Senhor dos Anéis", autor: "J.R. Tolkien", ano: 1954 };
+        var { titulo, autor } = livro;
+        function getInfo(livro) {
+            return livro.titulo + " por " + livro.autor;
+        }
+        document.getElementById("resposta").innerText = 
+            "Info: " + getInfo(livro);
+    </script>
+</body>
+</html>
