@@ -9,10 +9,10 @@ const altura = 1.70
 
 const resultado = CalculadoraIMC(peso, altura);
 
-console.log(resultado.toFixed(2))
+console.log(resultado.toFixed(2));
 
 
-import moment, {} from "moment";
+import moment from 'moment';
 
 const hoje = moment().locale('pt-br')
 console.log(hoje.format("DD/MM/YYYY"));
