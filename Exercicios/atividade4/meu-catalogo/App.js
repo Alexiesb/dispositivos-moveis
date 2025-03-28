@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View, Image} from 'react-native';
 import Filme from './Componentes/Filme'; 
 import Serie from './Componentes/Serie';
 
@@ -18,7 +18,7 @@ export default function App() {
     "ano": 1960,
     "diretor": "Alfred Hitchcock",
     "tipo": "Terror",
-    "capa": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Psycho_%281960%29_theatrical_poster_%28retouched%29.jpg/250px-Psycho_%"
+    "capa": "https://s2-globo-play.glbimg.com/jYqsRvkzo3IZU0l8CMDNON2faUU=/362x536/https://s2-globo-play.glbimg.com/mNKWjeSUFHy9fthgDLmpYd9NDnM=/https://s2.glbimg.com/8goPAWNsJlBxbw54bvTH4CxR1Fc=/i.s3.glbimg.com/v1/AUTH_c3c606ff68e7478091d1ca496f9c5625/internal_photos/bs/2022/m/q/B8m3BsS1qk7xkxKbXX0g/2727478-poster.jpg"
     },
     {
     "nome": "O Beijo da Mulher Aranha",
@@ -63,8 +63,6 @@ export default function App() {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <StatusBar style="auto" />
-
         {
           listaFilmes.map(
             filme => {
@@ -74,6 +72,7 @@ export default function App() {
                   ano = {filme.ano}
                   diretor = {filme.diretor}
                   tipo = {filme.tipo}
+                  capa = {filme.capa}
                 />
               )
             }
@@ -88,21 +87,24 @@ export default function App() {
                   nome = {serie.nome}
                   ano = {serie.ano}
                   diretor = {serie.diretor}
-                  tipo = {serie.tipo}
+                  temporadas = {serie.temporadas}
+                  capa = {serie.capa}
                 />
               )
             }
           )
         }
       </View>
+      <StatusBar style="auto" />
     </ScrollView>
+    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#fff'
     //alignItems: 'center',
     //justifyContent: 'center',
   },

@@ -1,11 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Image} from 'react-native'
 import React from 'react'
 
 export default function Serie(props) {
   const {nome, ano, diretor, temporadas, capa} = props
   return (
-    <View>
-      <Text style={styles.texto}>Filme</Text>
+    <View style={styles.container}>
+      <Text style={styles.texto}>Serie</Text>
       <Text style={styles.texto}>Nome: {nome}</Text>
       <Text style={styles.texto}>Ano: {ano}</Text> 
       <Text style={styles.texto}>Diretor: {diretor}</Text> 
@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
         borderWidth: 10,
         padding: 5,
         alignItems: 'center',
+        justifyContent: 'center',
         flex: 1
       },
     texto: {
