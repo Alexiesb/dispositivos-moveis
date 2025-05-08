@@ -18,16 +18,8 @@ export default function App() {
             headerTintColor: '#fff',
           }}
         >
-          <Stack.Screen
-            name="Home"
-            component={HomeScreen}
-            options={{ title: 'Lista de Receitas' }}
-          />
-          <Stack.Screen
-            name="Receita"
-            component={ReceitaScreen}
-            options={{ title: 'Detalhes da Receita' }}
-          />
+          <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Lista de Receitas' }} />
+          <Stack.Screen name="Receita" component={ReceitaScreen} options={{ title: 'Detalhes da Receita' }} />
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>
